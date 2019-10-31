@@ -22,19 +22,19 @@ Many applications allow you to set up webhooks for tracking your realtime activi
 
 1) Make sure your port 80 and 443 (default it changes as per your configuration) are open for your webhook provider ie. it should be publicly accessible.
 
-Check using telnet 
+   Check using telnet 
 
-`telnet webhook.mydomain.com 80{443 or any other port}`
+   `telnet webhook.mydomain.com 80{443 or any other port}`
 
-If the URL is open it will give below results
+   If the URL is open it will give below results
 
-```bash
-Connected to webhook.mydomain.com.
-Escape character is '^]'.
-^]
-telnet> quit
-Connection closed.
-```
+   ```bash
+   Connected to webhook.mydomain.com.
+   Escape character is '^]'.
+   ^]
+   telnet> quit
+   Connection closed.
+   ```
 
 2) Prepare a URL that you need to share with your webhook provider.
 ie. deploying a piece of code (webhook receiving module) for consuming data which will be posted by the provider. 
@@ -44,11 +44,15 @@ ie. deploying a piece of code (webhook receiving module) for consuming data whic
 If PHP is installed on your web server you can simply copy & paste the below code snippet in file getwebhooks.php at your web server location
 
 Default locations
+
 Apache web server:`/var/www/html/getwebhooks.php`
+
 Nginx web server : `/usr/share/nginx/html/getwebhooks.php`
+
 If you have the custom path : `/{path to web server}/getwebhooks.php`
 
 **getwebhooks.php**
+
 ```php
 <?php
 $webhook_data = file_get_contents('php://input');

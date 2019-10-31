@@ -119,11 +119,11 @@ But there are already available tools and with the help of those you can always 
 
   * Generates the random URL and help you test, inspect the action for each events on your webhook URL.
   
-  ![webhook-site](https://i.imgur.com/Qo5mHlV.png)
+    ![webhook-site](https://i.imgur.com/Qo5mHlV.png)
   
 2. [Request bin](https://requestbin.com/)
 
-  ![Imgur](https://i.imgur.com/SFgi3NW.png)
+    ![Imgur](https://i.imgur.com/SFgi3NW.png)
   
   * All you need is the URL they provide and hit any curl request to particular URL they will help you render the posted data on their UI.
 
@@ -163,3 +163,4 @@ Since webhook URL is publicly open, there will be always a security concern of s
 
 ## Conclusion
 
+Webhooks play a vital role in this modern world where bots revert on responses. It not only keeps us updated on a real-time basis but helps to fix, solve, take a specific action on the data posted on the URL.

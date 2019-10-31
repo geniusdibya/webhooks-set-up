@@ -1,5 +1,3 @@
-# webhooks-set-up
-
 ## What is Webhook?
  
 Webhook is very simple and understanding the webhook’s working mechanism is much simpler too. Ideally, it sends notification (data) on a particular URL mostly via POST method request on every activity/action of the user.

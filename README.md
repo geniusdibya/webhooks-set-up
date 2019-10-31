@@ -10,10 +10,10 @@ Webhook has many different names such as “Reverse API”, “web callback” o
 
 Many applications allow you to set up webhooks for tracking your realtime activities. Here are a sample list of products who over webhooks integration:
 
-* [Github](github.com) (extensively used among developers, [notifies for every activity/action](https://developer.github.com/webhooks/) on your repository).
+1) [Github](github.com) (extensively used among developers, [notifies for every activity/action](https://developer.github.com/webhooks/) on your repository).
 
-* [Slack](slack.com) (Slack webhook notifies you on a particular channel on a particular activity[any integration related to development or third party])
+2) [Slack](slack.com) (Slack webhook [notifies you on a particular channel on a particular activity](https://api.slack.com/messaging/webhooks) - any integration related to development or third party)
 
-* [Facebook]() (Receive real-time notifications of changes to your Facebook Page)
+3) [Facebook](https://developers.facebook.com/docs/messenger-platform/getting-started/webhook-setup/) (Receive real-time notifications of changes to your Facebook Page)
 
-* [Pepipost]() (notifies you on every activity on email)* 
+4) [Pepipost](https://docs.pepipost.com/docs/webhooks) (notifies you on every activity on email)* 

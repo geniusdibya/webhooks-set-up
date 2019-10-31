@@ -43,11 +43,11 @@ ie. deploying a piece of code (webhook receiving module) for consuming data whic
 
 If PHP is installed on your web server you can simply copy & paste the below code snippet in file getwebhooks.php at your web server location
 
-Default locations
+**Default locations**
 
-Apache web server:`/var/www/html/getwebhooks.php`
+Apache web server:  `/var/www/html/getwebhooks.php`
 
-Nginx web server : `/usr/share/nginx/html/getwebhooks.php`
+Nginx web server :  `/usr/share/nginx/html/getwebhooks.php`
 
 If you have the custom path : `/{path to web server}/getwebhooks.php`
 
@@ -58,5 +58,35 @@ If you have the custom path : `/{path to web server}/getwebhooks.php`
 $webhook_data = file_get_contents('php://input');
 file_put_contents('/tmp/consumewebhook.log', $webhook_data)
 ?>
+```
+
+## Writing Webhooks in Python
+
+Similarly for python install/update web, six packages using below command:
+    
+`sudo pip install web.py==0.40`{whichever is latest}
+
+`sudo pip install six --upgrade`
+
+copy paste the below code snippet in file getwebhooks.py
+
+```python
+import web
+
+urls = ('/.*', 'hooks')
+
+app = web.application(urls, globals())
+
+class hooks:
+    def POST(self):
+        data = web.data()
+        print
+        print 'DATA RECEIVED:'
+        print data
+        print
+        return 'OK'
+
+if __name__ == '__main__':
+    app.run()
 ```
 

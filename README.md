@@ -17,3 +17,42 @@ Many applications allow you to set up webhooks for tracking your realtime activi
 3) [Facebook](https://developers.facebook.com/docs/messenger-platform/getting-started/webhook-setup/) (Receive real-time notifications of changes to your Facebook Page)
 
 4) [Pepipost](https://docs.pepipost.com/docs/webhooks) (notifies you on every activity on email)* 
+
+## How to set up a webhook?
+
+1) Make sure your port 80 and 443 (default it changes as per your configuration) are open for your webhook provider ie. it should be publicly accessible.
+
+Check using telnet 
+
+`telnet webhook.mydomain.com 80{443 or any other port}`
+
+If the URL is open it will give below results
+
+```bash
+Connected to webhook.mydomain.com.
+Escape character is '^]'.
+^]
+telnet> quit
+Connection closed.
+```
+
+2) Prepare a URL that you need to share with your webhook provider.
+ie. deploying a piece of code (webhook receiving module) for consuming data which will be posted by the provider. 
+
+## Writing Webhooks in PHP
+
+If PHP is installed on your web server you can simply copy & paste the below code snippet in file getwebhooks.php at your web server location
+
+Default locations
+Apache web server:`/var/www/html/getwebhooks.php`
+Nginx web server : `/usr/share/nginx/html/getwebhooks.php`
+If you have the custom path : `/{path to web server}/getwebhooks.php`
+
+**getwebhooks.php**
+```php
+<?php
+$webhook_data = file_get_contents('php://input');
+file_put_contents('/tmp/consumewebhook.log', $webhook_data)
+?>
+```
+
